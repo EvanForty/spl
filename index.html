@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SPL — anyone can build on Solana</title>
+<meta name="theme-color" content="#05060b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SPL — anyone can build on Solana">
+<meta property="og:description" content="Deploy staking vaults, vesting, escrow, payments, multisigs and treasuries on Solana in one click. No Rust.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="A one-click Solana program launchpad. Deploy, customize and monetize on-chain programs without writing Rust.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="mtop">
+  <a class="logo" href="#hq" aria-label="SPL home"><span class="mark"><img src="/spl-nav.png" width="40" height="48" alt=""></span><span><b class="gradtext">SPL</b></span></a>
+  <span class="sp"></span>
+  <a class="xbtn" href="https://x.com/SPLdotfun" target="_blank" rel="noopener noreferrer" aria-label="SPL on X (opens in a new tab)"><span class="xg" aria-hidden="true">X</span><span class="xh">@SPLdotfun</span></a>
+  <button class="btn" type="button" data-connect>connect wallet</button>
+  <nav aria-label="sections"><a href="#hq" data-tab="hq" aria-current="page">HQ</a><a href="#launch" data-tab="launch">Launch</a><a href="#how" data-tab="how">How it works</a><a href="#dashboard" data-tab="dashboard">Dashboard</a><a href="#market" data-tab="market">Marketplace</a><a href="#ledger" data-tab="ledger">Buyback ledger</a><a href="#flywheel" data-tab="flywheel">Flywheel</a></nav>
+</header>
+
+<div class="app">
+  <aside class="side">
+    <a class="logo" href="#hq" aria-label="SPL home"><span class="mark"><img src="/spl-nav.png" width="40" height="48" alt=""></span><span><b class="gradtext">SPL</b><span>$SPL</span></span></a>
+    <nav class="snav" aria-label="sections">
+      <a href="#hq" data-tab="hq" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8M12 16v4"/></svg>HQ</a>
+      <a href="#launch" data-tab="launch"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg>Launch</a>
+      <a href="#how" data-tab="how"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17h.01"/></svg>How it works</a>
+      <a href="#dashboard" data-tab="dashboard"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>Dashboard</a>
+      <a href="#market" data-tab="market"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Marketplace</a>
+      <a href="#ledger" data-tab="ledger"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>Buyback ledger</a>
+      <a href="#flywheel" data-tab="flywheel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6"/><path d="M20 4v5h-5"/></svg>Flywheel</a>
+    </nav>
+    <div class="card promo">
+      <h2>Anyone can build on Solana.</h2>
+      <p>Deploy staking vaults, vesting, escrow and treasuries in a few clicks. No Rust, no servers.</p>
+      <a class="btn gold" href="#launch">Deploy a program</a>
+    </div>
+    <span class="grow"></span>
+    <div class="wallet">
+      <button class="btn" id="walletBtn" aria-haspopup="true">connect wallet</button>
+      <div class="wallet-menu" id="walletMenu" role="menu">
+        <div class="lbl" id="wmProvider">connected</div>
+        <div class="addr" id="wmAddr"></div>
+        <button class="btn ghost" id="copyAddr" style="color:#e6e8f8">copy address</button>
+        <button class="btn ghost" id="disconnect" style="color:#ff9a9a">disconnect</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="topbar">
+    <div class="ticker" aria-hidden="true"><div class="run"><span>ANYONE CAN <b>BUILD ON SOLANA</b></span><span><i>6</i> PROGRAM TEMPLATES</span><span><i>0</i> PROGRAMS DEPLOYED</span><span><i>0.00 SOL</i> BOUGHT BACK · <i>0</i> $SPL BURNED</span><span>NO RUST REQUIRED</span><span>IMMUTABLE <b>BY DEFAULT</b></span><span>STAKING · VESTING · ESCROW · PAYMENTS · MULTISIG · TREASURY</span><span>ANYONE CAN <b>BUILD ON SOLANA</b></span><span><i>6</i> PROGRAM TEMPLATES</span><span><i>0</i> PROGRAMS DEPLOYED</span><span><i>0.00 SOL</i> BOUGHT BACK · <i>0</i> $SPL BURNED</span><span>NO RUST REQUIRED</span><span>IMMUTABLE <b>BY DEFAULT</b></span><span>STAKING · VESTING · ESCROW · PAYMENTS · MULTISIG · TREASURY</span></div></div>
+    <a class="xtop" href="https://x.com/SPLdotfun" target="_blank" rel="noopener noreferrer" aria-label="SPL on X (opens in a new tab)"><span class="xg" aria-hidden="true">X</span>@SPLdotfun</a>
+  </div>
+
+  <main class="center card" id="hq">
+    <div class="stage" id="stage">
+      <div class="chips">
+        <div class="l"><span class="chip"><span class="rd"></span>LIVE</span><span class="chip">EPOCH <b id="epoch" style="font-weight:400">—</b></span></div>
+        <div class="r">
+          <div class="stat"><b class="g">0</b><span>PROGRAMS</span></div>
+          <div class="stat"><b>0</b><span>TRANSACTIONS</span></div>
+          <div class="stat"><b class="g">0 SOL</b><span>BOUGHT BACK</span></div>
+          <div class="stat"><b>0</b><span>BURNED</span></div>
+        </div>
+      </div>
+      <div class="forge" id="forge">
+        <button class="fnav prev" type="button" id="prevT" aria-label="previous template">‹</button>
+        <div class="pc-scene" role="img" aria-label="Rotating program module for the selected template">
+          <div class="pcube" id="pcube">
+            <div class="pf front"><small>SOLANA PROGRAM</small><b id="pcName">STAKING VAULT</b><span id="pcFee">immutable by default</span></div>
+            <div class="pf back"><small>NO RUST</small><b>ONE CLICK</b></div>
+            <div class="pf right"><small>DEPLOYS TO</small><b>SOLANA</b></div>
+            <div class="pf left"><small>POWERED BY</small><b class="gradtext">$SPL</b></div>
+            <div class="pf top"></div>
+            <div class="pf bottom"></div>
+          </div>
+        </div>
+        <button class="fnav next" type="button" id="nextT" aria-label="next template">›</button>
+      </div>
+      <div class="beam" aria-hidden="true"></div>
+      <div class="chain" aria-hidden="true"><div class="cplane" id="cplane"><div class="rail"></div></div></div>
+      <p class="chainlbl">SOLANA MAINNET · SLOT <b id="slotNum">—</b></p>
+      <div class="caption" aria-live="polite"><span class="lbl" id="capLbl">STAKING VAULT</span><p id="capText"></p></div>
+      <div class="camctl"><button type="button" id="autoCam" aria-pressed="true" title="Drag the module to turn it">auto spin</button><button type="button" id="resetCam" aria-label="reset view">↺</button></div>
+    </div>
+    <section class="panel" id="p-how" aria-labelledby="t-how">
+      <div class="phead"><div><span class="eyebrow">how it works</span><h2 id="t-how">Programs anyone can ship</h2><p>Pick a template, set it up in a form, deploy. Your program gets a public page and earns fees when people use it.</p></div><button class="close" type="button" aria-label="close">✕</button></div>
+      <ol class="cards">
+        <li><span class="n">01 · DEPLOY</span><h3>one-click deployment</h3><p>Connect your wallet, choose a template, set its parameters and deploy on Solana.</p></li>
+        <li><span class="n">02 · CHOOSE</span><h3>program marketplace</h3><p>Token vesting, staking vaults, escrow, payments, multisig wallets and automated treasuries.</p></li>
+        <li><span class="n">03 · CONFIGURE</span><h3>no-code builder</h3><p>Set permissions, fees, token mechanics and program logic in a visual form. No Rust.</p></li>
+        <li><span class="n">04 · RUN</span><h3>we run the plumbing</h3><p>Deployment transactions, program configuration, monitoring and integration tools.</p></li>
+        <li><span class="n">05 · EARN</span><h3>monetize templates</h3><p>Developers publish reusable templates and earn a fee every time someone deploys one.</p></li>
+        <li><span class="n">06 · WATCH</span><h3>program dashboard</h3><p>Transactions, active users, program revenue and on-chain activity in one place.</p></li>
+      </ol>
+      <h3 class="sect">launch anything</h3>
+      <div class="diff">
+        <div>
+          <p class="lead">A memecoin community can deploy a staking vault, a vesting schedule and an automated treasury in an afternoon, without hiring a developer.</p>
+          <p>Every program gets a public profile with its deployment address, verified source code, transaction history and usage stats.</p>
+        </div>
+        <ul class="guards">
+          <li><b>immutable</b><span>Templates deploy with no upgrade authority by default, so nobody can change the code later.</span></li>
+          <li><b>disclosed</b><span>If you keep upgrade authority, every program page shows it in plain sight.</span></li>
+          <li><b>audited</b><span>Templates must pass a security audit before they're listed.</span></li>
+          <li><b>reviewed</b><span>Custom program generation needs extra security review before it's offered.</span></li>
+        </ul>
+      </div>
+      <h3 class="sect">what makes it different</h3>
+      <div class="diff">
+        <div><p class="lead">Pump.fun democratized token creation. SPL democratizes program creation.</p></div>
+        <div><p style="color:var(--mute)">Instead of launching another token, you launch working on-chain infrastructure that other projects can integrate and pay to use.</p></div>
+      </div>
+    </section>
+
+    <section class="panel" id="p-launch" aria-labelledby="t-launch">
+      <div class="phead"><div><span class="eyebrow">launch a program</span><h2 id="t-launch">Launch</h2><p>Choose a template, set its parameters and deploy it on Solana. Everything here becomes your program's public profile.</p></div><button class="close" type="button" aria-label="close">✕</button></div>
+      <div class="bezel">
+        <div class="screen">
+          <div class="console">
+            <form id="launchForm" novalidate>
+              <div class="field">
+                <span id="tplLbl" style="display:block;font-family:var(--mono);font-size:13px;color:#9a97b0;margin-bottom:6px">program template</span>
+                <div class="tpl" role="group" aria-labelledby="tplLbl" id="tplBox"></div>
+              </div>
+              <div class="field">
+                <label for="fName">program name</label>
+                <input id="fName" maxlength="40" autocomplete="off" required>
+              </div>
+              <div class="params" id="params"></div>
+              <div class="row3">
+                <div class="field"><label for="fAdmin">admin authority</label><select id="fAdmin"><option value="wallet">my wallet</option><option value="multisig">a multisig</option></select></div>
+                <div class="field"><label for="fFee">protocol fee</label><select id="fFee"><option>0%</option><option selected>0.5%</option><option>1%</option><option>2%</option></select><span class="hint">paid to you on each use</span></div>
+                <div class="field"><label for="fUpg">upgrade authority</label><select id="fUpg"><option value="immutable">none (immutable)</option><option value="keep">keep it (shown publicly)</option></select></div>
+              </div>
+              <div class="field" id="msWrap" hidden><label for="fMs">multisig address</label><input id="fMs" autocomplete="off" spellcheck="false" placeholder="Solana address of the multisig"></div>
+              <div class="preview" aria-live="polite">
+                <div class="avatar" id="pvAv" style="background:#14f195">?</div>
+                <div><b id="pvName">your program</b><span id="pvMeta"></span></div>
+              </div>
+              <button class="btn" type="submit" id="launchBtn">connect wallet to deploy</button>
+            </form>
+            <div class="log">
+              <div class="title"><span>deploy log</span><span id="logState" style="color:#9a97b0">idle</span></div>
+              <ol id="logList"><li class="idle">waiting for a program name and a wallet<span class="cursor"></span></li></ol>
+              <div class="bar" aria-hidden="true"><i id="logBar"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="p-dashboard" aria-labelledby="t-dashboard">
+      <div class="phead"><div><span class="eyebrow">your desk</span><h2 id="t-dashboard">Dashboard</h2><p>Transactions, active users, revenue and on-chain activity for every program you run.</p></div><button class="close" type="button" aria-label="close">✕</button></div>
+      <div class="bezel dash">
+        <div class="screen">
+          <div class="grid">
+            <div><span>transactions</span><b id="dTx">—</b></div>
+            <div><span>active users</span><b id="dUsers">—</b></div>
+            <div><span>program revenue</span><b id="dRev">—</b></div>
+            <div><span>programs live</span><b id="dLive">—</b></div>
+          </div>
+          <div class="chart"><div style="text-align:center"><p id="dMsg">Connect a wallet to see your programs.</p><button class="btn" id="dConnect" type="button">connect wallet</button></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="p-market" aria-labelledby="t-market">
+      <div class="phead"><div><span class="eyebrow">every program, ranked</span><h2 id="t-market">Marketplace</h2><p>Every program has a public profile with its address, verified source, transaction history and usage. Integrate one or deploy your own.</p></div><button class="close" type="button" aria-label="close">✕</button></div>
+      <div class="mk-tools">
+        <label for="mkSearch" class="sr">search programs</label>
+        <input id="mkSearch" placeholder="search by name or template">
+        <div class="seg" role="group" aria-label="sort by">
+          <button type="button" aria-pressed="true" data-sort="tx">most used</button>
+          <button type="button" aria-pressed="false" data-sort="rev">revenue</button>
+          <button type="button" aria-pressed="false" data-sort="new">newest</button>
+        </div>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>#</th><th>program</th><th>template</th><th class="num">tx 30d</th><th class="num">users</th><th class="num">revenue</th><th>upgrade authority</th><th></th></tr></thead>
+          <tbody id="mkBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel" id="p-ledger" aria-labelledby="t-ledger">
+      <div class="phead"><div><span class="eyebrow">the treasury</span><h2 id="t-ledger">Buyback ledger</h2><p>Every $SPL buyback and burn, with its transaction so anyone can check it.</p></div><button class="close" type="button" aria-label="close">✕</button></div>
+      <div class="boxes4">
+        <div class="card"><span class="eyebrow">SOL spent</span><b class="g">0.00</b></div>
+        <div class="card"><span class="eyebrow">bought back</span><b>0<small>$SPL</small></b></div>
+        <div class="card"><span class="eyebrow">burned</span><b>0<small>$SPL</small></b></div>
+        <div class="card"><span class="eyebrow">entries</span><b>0</b></div>
+      </div>
+      <div class="notebox">No entries yet. Every buyback and burn is logged here with its transaction, funded by deployment and marketplace fees.</div>
+    </section>
+
+    <section class="panel" id="p-flywheel" aria-labelledby="t-flywheel">
+      <div class="phead"><div><span class="eyebrow">$SPL</span><h2 id="t-flywheel">The flywheel</h2><p>More programs mean more usage. Usage means fees. Fees fund buybacks.</p></div><button class="close" type="button" aria-label="close">✕</button></div>
+      <div class="fly">
+      <svg viewBox="0 0 540 540" role="img" aria-label="Flywheel: more programs launched, more on-chain program usage, more deployment and marketplace fees, revenue funds $SPL buybacks, more developers and templates, back to more programs launched">
+        <defs><marker id="ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="var(--phos)"/></marker></defs>
+        <path class="arc" d="M364 64 A200 200 0 0 1 452 194" marker-end="url(#ah)"/>
+        <path class="arc" d="M458 260 A200 200 0 0 1 418 414" marker-end="url(#ah)"/>
+        <path class="arc" d="M298 447 L248 447" marker-end="url(#ah)"/>
+        <path class="arc" d="M122 414 A200 200 0 0 1 82 260" marker-end="url(#ah)"/>
+        <path class="arc" d="M88 194 A200 200 0 0 1 174 64" marker-end="url(#ah)"/>
+        <rect class="core" x="205" y="225" width="130" height="90"/>
+        <text class="core-t" x="270" y="266" text-anchor="middle" font-size="18">$SPL</text>
+        <text class="core-t" x="270" y="290" text-anchor="middle" font-size="11">flywheel</text>
+        <g font-size="12">
+          <rect class="node-rect" x="180" y="30" width="180" height="54"/><text x="270" y="53" text-anchor="middle">more programs</text><text x="270" y="71" text-anchor="middle">launched</text>
+          <rect class="node-rect" x="380" y="200" width="150" height="54"/><text x="455" y="223" text-anchor="middle">more on-chain</text><text x="455" y="241" text-anchor="middle">program usage</text>
+          <rect class="node-rect" x="300" y="420" width="170" height="54"/><text x="385" y="443" text-anchor="middle">more deployment +</text><text x="385" y="461" text-anchor="middle">marketplace fees</text>
+          <rect class="node-rect" x="70" y="420" width="170" height="54"/><text x="155" y="443" text-anchor="middle">revenue funds</text><text x="155" y="461" text-anchor="middle">$SPL buybacks</text>
+          <rect class="node-rect" x="10" y="200" width="150" height="54"/><text x="85" y="223" text-anchor="middle">more developers</text><text x="85" y="241" text-anchor="middle">+ templates</text>
+        </g>
+      </svg>
+      <div>
+        <ol>
+          <li><span class="k">→</span><span><b>More programs launched.</b> Each one is working infrastructure on Solana.</span></li>
+          <li><span class="k">→</span><span><b>More on-chain program usage.</b> Other projects integrate the programs and use them.</span></li>
+          <li><span class="k">→</span><span><b>More deployment + marketplace fees.</b> Deploys and template sales earn the platform fees.</span></li>
+          <li><span class="k">→</span><span><b>Revenue funds $SPL buybacks.</b> A share of fees buys the token on the open market.</span></li>
+          <li><span class="k">→</span><span><b>More developers + templates.</b> Template creators earn, so more of them build.</span></li>
+        </ol>
+        <p class="fly-note">Buybacks depend on actual fee revenue and aren't guaranteed.</p>
+      </div>
+      </div>
+      <h3 class="sect">how SPL makes money</h3>
+      <div class="rev r4">
+        <div><h3>deployment fees</h3><p>A small fee each time a program is deployed.</p></div>
+        <div><h3>marketplace commissions</h3><p>A cut when someone deploys a template another developer published.</p></div>
+        <div><h3>premium templates</h3><p>Advanced programs with more options, priced per deploy.</p></div>
+        <div><h3>$SPL discounts</h3><p>Holders pay lower deployment and marketplace fees.</p></div>
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="right">
+    <section class="card feature" id="feature" aria-live="polite">
+      <h2 id="ftTitle">STAKING VAULT</h2>
+      <p class="sub2" id="ftSub"></p>
+      <ul id="ftList"></ul>
+      <p class="foot" id="ftFoot"></p>
+    </section>
+    <section class="card tool">
+      <div class="ttabs" role="tablist" aria-label="tools">
+        <button role="tab" type="button" id="tb-deploy" aria-controls="tp-deploy" aria-selected="true">Deploy</button>
+        <button role="tab" type="button" id="tb-programs" aria-controls="tp-programs" aria-selected="false" tabindex="-1">Programs</button>
+        <button role="tab" type="button" id="tb-publish" aria-controls="tp-publish" aria-selected="false" tabindex="-1">Publish</button>
+      </div>
+      <div class="tpanel" role="tabpanel" id="tp-deploy" aria-labelledby="tb-deploy">
+        <h3 id="qlTitle"><i></i><span>STAKING VAULT</span></h3>
+        <p>Name your program, then set its parameters on the Launch page.</p>
+        <label for="qlName">Program name</label>
+        <input id="qlName" maxlength="40" autocomplete="off">
+        <button class="btn gold" type="button" id="qlGo">continue to launch</button>
+        <p class="note">Templates deploy immutable by default. If you keep upgrade authority, it's shown on your program's page.</p>
+      </div>
+      <div class="tpanel" role="tabpanel" id="tp-programs" aria-labelledby="tb-programs" hidden>
+        <h3><i></i>deployed programs</h3>
+        <div class="empty" style="padding:26px 6px"><b>no programs yet</b><span>Deployed programs show up here with their address and activity.</span></div>
+        <a class="btn" href="#launch">deploy the first program</a>
+      </div>
+      <div class="tpanel" role="tabpanel" id="tp-publish" aria-labelledby="tb-publish" hidden>
+        <h3><i></i>publish a template</h3>
+        <p>Built a reusable Solana program? Publish it as a template and earn a fee every time someone deploys it.</p>
+        <p>Every template goes through a security audit before it's listed in the marketplace.</p>
+        <button class="btn" type="button" id="pubGo" data-connect>connect wallet</button>
+        <p class="note" id="pubNote">Connect the wallet you'll receive template fees with.</p>
+      </div>
+    </section>
+    <section class="card" aria-label="program templates"><div class="grid8" id="grid8"></div></section>
+  </aside>
+</div>
+
+<div class="modal" id="connectModal" role="dialog" aria-modal="true" aria-labelledby="cmTitle">
+  <div class="bezel"><div class="screen">
+    <button class="x" id="cmClose" aria-label="close">x</button>
+    <h3 id="cmTitle">connect wallet</h3>
+    <p style="color:#8f95bd;font-size:15px">Pick a Solana wallet. We only read your public address.</p>
+    <div class="wlist" id="wList"></div>
+  </div></div>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+<script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@1.95.3/lib/index.iife.min.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
